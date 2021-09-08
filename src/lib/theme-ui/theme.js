@@ -1,28 +1,28 @@
 export const theme = {
   styles: {
     root: {
-      '&, body': {
-        height: '100%',
+      "&, body": {
+        height: "100%",
       },
-      '& #root': {
-        minHeight: '100%',
-        display: 'flex',
+      "& #root": {
+        minHeight: "100%",
+        display: "flex",
       },
 
       fontFamily: "body",
       fontWeight: "body",
-      lineHeight: 'body',
-      color: "text",
+      lineHeight: "body",
+      color: "gray.900",
 
       h1: {
-        fontWeight: "bold",
+        fontWeight: "heading",
         fontSize: "2xl",
-        lineHeight: 'heading',
+        lineHeight: "heading",
       },
       h2: {
         fontWeight: "body",
         fontSize: "2xl",
-        lineHeight: 'heading',
+        lineHeight: "heading",
       },
     },
   },
@@ -45,8 +45,7 @@ export const theme = {
   fontWeights: {
     medium: 500,
     body: 600,
-    heading: 600,
-    bold: 800,
+    heading: 800,
   },
   lineHeights: {
     body: `${18 / 16}rem`,
@@ -86,14 +85,14 @@ export const theme = {
 
   layout: {
     root: {
-      display: 'flex',
-      flexDirection: 'column',
+      display: "flex",
+      flexDirection: "column",
       flex: 1,
     },
     superHeader: {
-      height: '40px',
-      display: 'flex',
-      alignItems: 'center',
+      height: "40px",
+      display: "flex",
+      alignItems: "center",
     },
     header: {
       py: 6,
@@ -102,6 +101,23 @@ export const theme = {
     main: {
       px: 8,
       flex: 1,
-    }
-  }
+    },
+  },
+  links: {
+    nav: {
+      fontWeight: "body",
+      fontSize: "lg",
+      color: "gray.900",
+      textDecoration: "none",
+      textTransform: "uppercase",
+
+      '&:hover': {
+        color: 'secondary',
+      },
+
+      "&.active": {
+        color: "secondary",
+      },
+    },
+  },
 };

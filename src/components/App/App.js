@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "theme-ui";
 import { SuperHeader } from "../SuperHeader/SuperHeader";
+import { Header } from "../Header/Header";
 
 const App = () => {
   return (
@@ -10,11 +11,7 @@ const App = () => {
       }}
     >
       <SuperHeader />
-
-      <Box
-        as="header"
-        sx={{ variant: "layout.header", backgroundColor: "white" }}
-      ></Box>
+      <Header />
 
       <Box as="main" sx={{ variant: "layout.main", backgroundColor: "white" }}>
         <h1>Hello there</h1>
