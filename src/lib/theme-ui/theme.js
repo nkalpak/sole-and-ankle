@@ -102,6 +102,9 @@ export const theme = {
       px: 8,
       flex: 1,
     },
+    content: {
+      mt: 8,
+    },
   },
   links: {
     nav: {
@@ -111,12 +114,22 @@ export const theme = {
       textDecoration: "none",
       textTransform: "uppercase",
 
-      '&:hover': {
-        color: 'secondary',
+      "&:hover": {
+        color: "secondary",
       },
 
       "&.active": {
         color: "secondary",
+      },
+    },
+
+    sidenav: {
+      fontWeight: "body",
+      color: "gray.900",
+      textDecoration: "none",
+
+      "&.active, &:hover": {
+        color: "primary",
       },
     },
   },

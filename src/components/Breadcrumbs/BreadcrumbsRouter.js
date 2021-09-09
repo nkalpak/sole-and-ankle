@@ -20,16 +20,14 @@ function getLastArrayItem(array) {
 
 export function BreadcrumbsRouter() {
   const location = ReactRouter.useLocation();
-  const crumbPaths = getCrumbPaths(location.pathname);
 
-  const renderBreadcrumbs =
-    crumbPaths.length > 1
-      ? crumbPaths.map((path) => (
-          <Breadcrumbs.Crumb to={path}>
-            {getLastArrayItem(path.split("/"))}
-          </Breadcrumbs.Crumb>
-        ))
-      : null;
-
-  return <Breadcrumbs>{renderBreadcrumbs}</Breadcrumbs>;
+  return (
+    <Breadcrumbs>
+      {getCrumbPaths(location.pathname).map((path) => (
+        <Breadcrumbs.Crumb to={path}>
+          {getLastArrayItem(path.split("/"))}
+        </Breadcrumbs.Crumb>
+      ))}
+    </Breadcrumbs>
+  );
 }
